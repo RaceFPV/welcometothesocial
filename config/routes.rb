@@ -1,6 +1,9 @@
 Welcometothesocial::Application.routes.draw do
   
+<<<<<<< HEAD
   devise_for :users
+=======
+>>>>>>> fbe671d164efbd7f4faa35cc3c0a69047e26792b
   root 'pages#index'
   
   # The priority is based upon order of creation: first created -> highest priority.

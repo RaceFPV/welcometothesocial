@@ -14,9 +14,12 @@ Welcometothesocial::Application.configure do
   config.action_controller.perform_caching = false
   config.quiet_assets = true
 
+<<<<<<< HEAD
   #generic devise config for testing
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   
+=======
+>>>>>>> fbe671d164efbd7f4faa35cc3c0a69047e26792b
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 

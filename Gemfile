@@ -21,9 +21,12 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 
+<<<<<<< HEAD
 # Authentication woooo
 gem 'devise'
 
+=======
+>>>>>>> fbe671d164efbd7f4faa35cc3c0a69047e26792b
 group :production do
   gem 'sqlite3'
   # Use sqlite3 as the database for Active Record
