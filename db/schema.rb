@@ -36,6 +36,10 @@ ActiveRecord::Schema.define(version: 20140722190437) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.string "confirmation_token"
+    t.string "unconfirmed_email"
     t.string   "name"
   end
 

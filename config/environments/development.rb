@@ -4,7 +4,7 @@ Welcometothesocial::Application.configure do
    # Email
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
-  #config.action_mailer.default_url_options = { :host => localhost }
+  config.action_mailer.default_url_options = { :host => "http://livepost-59339.use1.nitrousbox.com" }
   config.action_mailer.smtp_settings = {
     address: 'smtp.gmail.com', 
     port: '587',
@@ -12,7 +12,7 @@ Welcometothesocial::Application.configure do
     user_name: 'someuser',
     password: 'somepass',
     #authentication => :plain,
-    #domain => 'somedomain.com'
+    #domain => 'welcometothe.social'
   }
   
   
