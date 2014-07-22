@@ -1,4 +1,4 @@
-
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
 @import url(http://fonts.googleapis.com/css?family=Pacifico);
 
 body {
@@ -10,6 +10,7 @@ body {
 }
 
 .login {
+  font-family: 'Montserrat', sans-serif;
   float: right;
 }
 
