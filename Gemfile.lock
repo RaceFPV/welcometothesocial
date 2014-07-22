@@ -91,6 +91,9 @@ GEM
     hike (1.2.3)
     httpclient (2.3.4.1)
     i18n (0.6.11)
+    jquery-rails (3.1.1)
+      railties (>= 3.0, < 5.0)
+      thor (>= 0.14, < 2.0)
     json (1.8.1)
     libnotify (0.8.2)
       ffi (>= 1.0.11)
@@ -199,6 +202,8 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
+    turbolinks (2.2.2)
+      coffee-rails
     tzinfo (0.3.40)
     uglifier (2.5.3)
       execjs (>= 0.3.0)
@@ -223,6 +228,7 @@ DEPENDENCIES
   flay
   font-awesome-rails
   gritter
+  jquery-rails
   libnotify
   lol_dba
   quiet_assets
@@ -236,4 +242,5 @@ DEPENDENCIES
   selenium-webdriver
   smusher
   sqlite3
+  turbolinks
   uglifier (>= 1.3.0)
