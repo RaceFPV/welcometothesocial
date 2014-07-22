@@ -39,7 +39,7 @@ group :development do
     gem 'rails_best_practices'
     gem 'smusher'
     gem 'reek'
-    gem 'rack-mini-profiler'
+    #gem 'rack-mini-profiler'
     gem 'brakeman', :require => false
     gem 'rspec-rails' # Run rake tests in developmentgem 'sqlite3'
 end
