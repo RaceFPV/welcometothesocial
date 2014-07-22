@@ -1,3 +1,6 @@
+
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
+
 body {
   margin: 0;
   margin-top: 50px;
@@ -7,6 +10,10 @@ body {
 }
 
 .login {
-  position: fixed;
-  right: 30px;
+  float: right;
+}
+
+.navbar-brand {
+  
+  font-family: 'Pacifico', cursive;
 }
