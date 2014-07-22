@@ -12,15 +12,16 @@
 		    <div class="collapse navbar-collapse">
 		      <ul class="nav navbar-nav">
             <li><%= link_to "Home", root_path %></li>
-            <div class="login">
+            <div class="login nav navbar-nav">
               <% if signed_in? %>
-        <%= link_to 'Edit', edit_user_registration_path %>
-        <%= link_to 'Out', destroy_user_session_path, method: :delete %>
+            
+                <li><%= link_to 'Edit', edit_user_registration_path, :class => 'pull-right' %></li>
+                <li><%= link_to 'Out', destroy_user_session_path, method: :delete, :class => 'pull-right' %></li>
               <% else %>
-        <%= link_to 'New', new_user_registration_path %>
-        <%= link_to 'In', new_user_session_path %>
+                <li><%= link_to 'Sign Up', new_user_registration_path, :class => 'pull-right' %><li>
+                <li><%= link_to 'Sign In', new_user_session_path, :class => 'pull-right' %></li>
               <% end %>
-              <div>
+            </div>
 		      </ul>
 		    </div><!--/.nav-collapse -->
 		  </div>
