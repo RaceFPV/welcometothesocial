@@ -13,7 +13,7 @@ gem 'ruby-progressbar' #nice progressbar for seeding process
 gem "gritter" #for better flash messages
 
 #for nice icons
-gem "font-awesome-rails"
+gem 'font-awesome-sass'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'

@@ -89,8 +89,8 @@ GEM
     flay (2.4.0)
       ruby_parser (~> 3.0)
       sexp_processor (~> 4.0)
-    font-awesome-rails (4.0.3.1)
-      railties (>= 3.2, < 5.0)
+    font-awesome-sass (4.1.0)
+      sass (~> 3.2)
     gritter (1.1.0)
     haml (4.0.5)
       tilt
@@ -235,7 +235,7 @@ DEPENDENCIES
   devise
   factory_girl_rails
   flay
-  font-awesome-rails
+  font-awesome-sass
   gritter
   jquery-rails
   libnotify
