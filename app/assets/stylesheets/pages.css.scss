@@ -1,3 +1,40 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
+
+.mainsplash {
+  position: absolute;
+  text-align: center;
+  top: 50px;
+  left: 0;
+  height: 60%;
+  width: 100%;
+	background: url(dark_wood.png);
+  padding-top: 50px;
+  -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.3);
+-moz-box-shadow:    7px 7px 5px 0px rgba(50, 50, 50, 0.3);
+box-shadow:         7px 7px 5px 0px rgba(50, 50, 50, 0.3);
+}
+
+.mainsplash h1 {
+  font-size: 70px;
+  color: #eaeaea;
+  padding-bottom: 5px;
+  font-family: 'Pacifico', cursive;
+  text-shadow: 0px 5px 4px rgba(219, 219, 219, 0.51);
+}
+
+.divider1 {
+  margin-top: 400px;
+}
+
+.divider1 h2 {
+  font-family: 'Pacifico', cursive;
+  margin-bottom: 30px;
+}
+
+.divider1 p {
+}
