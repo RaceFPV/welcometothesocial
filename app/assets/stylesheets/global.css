@@ -3,6 +3,5 @@ body {
 }
 
 .login {
-  position: fixed;
-  right: 30px;
+  float: right;
 }
