@@ -1,7 +1,12 @@
 Welcometothesocial::Application.routes.draw do
   
-  root 'pages#index'
+  devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks'}
+  devise_scope :user do
+    get "sign_in", to: "devise/sessions#new"
+  end
+  match '/profile/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup
   
+  root 'pages#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

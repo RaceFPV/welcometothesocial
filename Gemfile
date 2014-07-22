@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.5'
 
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 gem 'bootstrap-sass', '~> 3.0.2.0' # Twitter Bootstrap front-end framework
@@ -15,6 +14,12 @@ gem "gritter" #for better flash messages
 #for nice icons
 gem "font-awesome-rails"
 
+#for user login framework, guide used: http://sourcey.com/rails-4-omniauth-using-devise-with-twitter-facebook-and-linkedin/
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-twitter'
+gem 'omniauth-facebook'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
@@ -22,8 +27,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 
 group :production do
-  gem 'sqlite3'
-  # Use sqlite3 as the database for Active Record
+  gem 'pg' #use postgres for production
 end
 
 group :development do
@@ -38,7 +42,8 @@ group :development do
     gem 'reek'
     gem 'rack-mini-profiler'
     gem 'brakeman', :require => false
-    gem 'rspec-rails' # Run rake tests in developmentgem 'sqlite3'
+    gem 'rspec-rails' # Run rake tests in development
+    gem 'sqlite3'
 end
 
 group :development, :test do

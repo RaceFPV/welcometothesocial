@@ -1,6 +1,21 @@
 Welcometothesocial::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+   # Email
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  #config.action_mailer.default_url_options = { :host => localhost }
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.gmail.com', 
+    port: '587',
+    enable_starttls_auto: true,
+    user_name: 'someuser',
+    password: 'somepass',
+    #authentication => :plain,
+    #domain => 'somedomain.com'
+  }
+  
+  
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
@@ -31,7 +46,7 @@ Welcometothesocial::Application.configure do
       # Activate Bullet development gem
   config.after_initialize do
   Bullet.enable = true #enable bullet
-  Bullet.alert = true #alert in the browser via a javascript popup
+  #Bullet.alert = true #alert in the browser via a javascript popup
   #Bullet.bullet_logger = true #don't log things to a special log file
   #Bullet.console = true #dont log things to the web log file
   #Bullet.growl = true #we dont use growl
