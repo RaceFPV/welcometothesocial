@@ -7,7 +7,7 @@ Welcometothesocial::Application.routes.draw do
   root 'pages#index'
   
   #location users go after signing in
-  match  '/personal', to: 'boards#personal', via: 'get', as: :personal
+  match  '/boards/personal', to: 'boards#personal', via: 'get', as: :personal
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
