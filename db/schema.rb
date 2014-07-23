@@ -11,16 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140723020506) do
+ActiveRecord::Schema.define(version: 20140723023828) do
 
   create_table "boards", force: true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
+    t.integer  "user_id"
   end
 
+  add_index "boards", ["user_id"], name: "index_boards_on_user_id"
+
   create_table "posts", force: true do |t|
-    t.integer  "user_id"
     t.integer  "board_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -29,7 +31,6 @@ ActiveRecord::Schema.define(version: 20140723020506) do
   end
 
   add_index "posts", ["board_id"], name: "index_posts_on_board_id"
-  add_index "posts", ["user_id"], name: "index_posts_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
