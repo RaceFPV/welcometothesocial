@@ -1,17 +1,48 @@
-<h2>Sign in</h2>
-
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email, :autofocus => true %></div>
-
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
-
-  <div><%= f.submit "Sign in" %></div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+<div class="mainsplash">
+<h1 class="mainsplashtitle"> Welcome to the .Social </h1>
+</div>
+<div class="divider1">
+  <row>
+    <div class="col-sm-6">
+  <h2> .Social basics </h2>
+  <p> The .Social is a new way to communicate and share anything and everything in a quick, simple way.</p>
+    </div>
+    <div class="col-sm-6">
+      <%= image_tag "chalkboard101.png", style: 'width: 95%' %>
+    </div>
+  </row>
+</div>
+<span class="fa  fa-arrow-down  col-sm-offset-6" style="font-size: 90px;margin-top: 40px;margin-bottom: 40px;"></span>
+<div class="divider2">
+  <row>
+    <div class="col-sm-6">
+      <span style="font-size: 120px;margin-left: 50px;" class="fa fa-tachometer">&nbsp;</span>
+    </div>
+    <div class="col-sm-6">
+  <h2> .Social benefits </h2>
+        <p> Quick forums, fast posting, easy replies... just some of the .Social benifits avaiable to all .Socialites.</p>
+    </div>
+  </row>
+</div>
+<span class="fa  fa-arrow-down  col-sm-offset-6" style="font-size: 90px;margin-top: 15px;margin-bottom: 30px;"></span>
+<div class="divider3">
+  <row>
+    <div class="col-sm-6">
+  <h2> .Social future </h2>
+  <p> Once you get started you'll be joining an amazing new community spreading .Social worldwide. Get ready for the future, it's happening right here.</p>
+    </div>
+    <div class="col-sm-6">
+      <span style="font-size: 120px;margin-left: 50px;" class="fa fa-rocket">&nbsp;</span>
+    </div>
+  </row>
+</div>
+<span class="fa  fa-arrow-down  col-sm-offset-6" style="font-size: 90px;margin-top: 15px;margin-bottom: 20px;"></span>
+<div class="getstarted">
+  <%= link_to "Lets start", new_user_registration_path, class: "btn btn-large btn-primary col-sm-offset-6" %>
+</div>
+</div>
+		<div id="footerwrap">
+			<div class="container">
+				<h4>Crafted by <a href="mailto: ccnppro@yahoo.com">Michael Rickert</a> + <a href="mailto: andrew@primefour.com">Andrew Villarrubia</a> + <a href="mailto: transparentb@gmail.com">Skew</a> - Copyright 2014</h4>
+			</div>
+		</div>

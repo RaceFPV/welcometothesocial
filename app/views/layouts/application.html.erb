@@ -10,16 +10,16 @@
 <body>
     <%= render partial: 'layouts/navbar' %> <!-- render the layouts/_navbar.html.erb file so this page isnt so messy -->
 		<div class="container">
-        
+
       
+		<%= yield %>
+            
       <% if notice %>
         <p class="alert alert-success"><%= notice %></p>
       <% end %>
       <% if alert %>
         <p class="alert alert-danger"><%= alert %></p>
       <% end %>
-      
-		<%= yield %>
 
 		</div><!-- /.container -->
 </body>

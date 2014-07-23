@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/zquestz/omniauth-google-oauth2.git
+  revision: 15f2fc1178c49d148db466ca5b0c77cf8b29f447
+  specs:
+    omniauth-google-oauth2 (0.2.5)
+      omniauth (> 1.0)
+      omniauth-oauth2 (~> 1.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -84,6 +92,8 @@ GEM
     factory_girl_rails (4.4.0)
       factory_girl (~> 4.4.0)
       railties (>= 3.0.0)
+    faraday (0.9.0)
+      multipart-post (>= 1.2, < 3)
     fastercsv (1.5.5)
     ffi (1.9.3)
     flay (2.4.0)
@@ -94,6 +104,7 @@ GEM
     gritter (1.1.0)
     haml (4.0.5)
       tilt
+    hashie (3.2.0)
     highline (1.6.20)
     hike (1.2.3)
     httpclient (2.3.4.1)
@@ -102,6 +113,7 @@ GEM
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.1)
+    jwt (1.0.0)
     libnotify (0.8.2)
       ffi (>= 1.0.11)
     lol_dba (1.6.0)
@@ -115,8 +127,24 @@ GEM
     mini_portile (0.5.2)
     minitest (4.7.5)
     multi_json (1.10.1)
+    multi_xml (0.5.5)
+    multipart-post (2.0.0)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
+    oauth2 (1.0.0)
+      faraday (>= 0.8, < 0.10)
+      jwt (~> 1.0)
+      multi_json (~> 1.3)
+      multi_xml (~> 0.5)
+      rack (~> 1.2)
+    omniauth (1.2.2)
+      hashie (>= 1.2, < 4)
+      rack (~> 1.0)
+    omniauth-oauth2 (1.2.0)
+      faraday (>= 0.8, < 0.10)
+      multi_json (~> 1.3)
+      oauth2 (~> 1.0)
+      omniauth (~> 1.2)
     orm_adapter (0.5.0)
     polyglot (0.3.5)
     quiet_assets (1.0.2)
@@ -240,6 +268,7 @@ DEPENDENCIES
   jquery-rails
   libnotify
   lol_dba
+  omniauth-google-oauth2!
   quiet_assets
   rails (= 4.0.5)
   rails_best_practices

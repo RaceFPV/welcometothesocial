@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140723025118) do
+ActiveRecord::Schema.define(version: 20140723190514) do
 
   create_table "boards", force: true do |t|
     t.datetime "created_at"
@@ -47,6 +47,8 @@ ActiveRecord::Schema.define(version: 20140723025118) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "provider"
+    t.string   "uid"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

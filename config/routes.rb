@@ -1,7 +1,7 @@
 Welcometothesocial::Application.routes.draw do
   
   #required for devise
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
   
   #website root
   root 'pages#index'
