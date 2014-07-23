@@ -1,3 +1,22 @@
 // Place all the styles related to the boards controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.pagetitle {
+  position: fixed;
+  top: -45px;
+  left: 45%;
+  z-index: 1200;
+}
+
+.pagecontent {
+  margin-top: 50px;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+}
+
+h3, h4, p {
+  font-family: 'Montserrat', sans-serif;
+}

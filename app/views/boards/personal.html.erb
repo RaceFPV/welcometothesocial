@@ -1,6 +1,10 @@
+<h1 class="pagetitle"> Personal </h1>
+<div  class="pagecontent">
+<row>
+  <div class="col-sm-8 col-sm-offset-2" align="center">
 <!-- check if the user has any posts -->
 <% if @user.posts.empty? %>
-<h3> You don't have any posts </h3>
+<h3> You don't have any recent posts </h3>
 <% else %>
   <% @user.posts.each do |x| %>
 <%= link_to x.title, x %>
@@ -10,8 +14,14 @@
 <!-- check if the user has any boards -->
 <% if @user.boards.empty? %>
 <h3> You aren't a member of any boards </h3>
+    <br/>
+    <br/>
+    <h4><%= link_to "Go discover some new boards!", discover_path %></h4>
 <% else %>
 <% @user.boards.each do |x| %>
 <%= link_to x.name, x %>
 <% end %>
 <% end %>
+  </div>
+  </row>
+</div>
