@@ -1,7 +1,17 @@
+<!-- check if the user has any posts -->
 <% if @user.posts.empty? %>
 <h3> You don't have any posts </h3>
 <% else %>
   <% @user.posts.each do |x| %>
 <%= link_to x.title, x %>
+<% end %>
+<% end %>
+
+<!-- check if the user has any boards -->
+<% if @user.boards.empty? %>
+<h3> You aren't a member of any boards </h3>
+<% else %>
+<% @user.boards.each do |x| %>
+<%= link_to x.name, x %>
 <% end %>
 <% end %>
