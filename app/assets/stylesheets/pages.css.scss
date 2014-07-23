@@ -50,5 +50,47 @@ font-family: 'Montserrat', sans-serif;
 
 .divider2 p {
 font-family: 'Montserrat', sans-serif;
-  padding-bottom: 80px;
+  padding-bottom: 40px;
+}
+
+
+.divider3 {
+}
+
+.divider3 h2 {
+  font-family: 'Pacifico', cursive;
+  margin-bottom: 30px;
+  
+}
+
+.divider3 p {
+font-family: 'Montserrat', sans-serif;
+  padding-bottom: 40px;
+}
+
+.getstarted {
+  margin-right: 30px;
+  padding-bottom: 85px; 
+  margin-top: 40px;
+}
+
+.getstarted a {
+  font-family: 'Pacifico', cursive;
+  color: rgb(230, 230, 230);
+font-size: 20px;
+padding: 15px;
+text-shadow: 0px -1px 2px rgba(30, 30, 30, 0.8);
+-webkit-border-radius: 50px;
+-moz-border-radius: 50px;
+border-radius: 50px;
+background: rgb(51, 53, 87);
+background: -moz-linear-gradient(90deg, rgb(51, 53, 87) 30%, rgb(101, 122, 181) 77%);
+background: -webkit-linear-gradient(90deg, rgb(51, 53, 87) 30%, rgb(101, 122, 181) 77%);
+background: -o-linear-gradient(90deg, rgb(51, 53, 87) 30%, rgb(101, 122, 181) 77%);
+background: -ms-linear-gradient(90deg, rgb(51, 53, 87) 30%, rgb(101, 122, 181) 77%);
+background: linear-gradient(0deg, rgb(51, 53, 87) 30%, rgb(101, 122, 181) 77%);
+-webkit-box-shadow: 0px 2px 5px rgba(74, 80, 78, 0.73);
+-moz-box-shadow:    0px 2px 5px rgba(74, 80, 78, 0.73);
+box-shadow:         0px 2px 5px rgba(74, 80, 78, 0.73);
+
 }
