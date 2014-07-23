@@ -1,0 +1,7 @@
+<% if @user.posts.empty? %>
+<h3> You don't have any posts </h3>
+<% else %>
+  <% @user.posts.each do |x| %>
+<%= link_to x.title, x %>
+<% end %>
+<% end %>
