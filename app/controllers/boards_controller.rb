@@ -12,4 +12,8 @@ class BoardsController < ApplicationController
     @boardname = @board.name
     @boarddescription = @board.description
   end
+  
+  def new
+  end
+  
 end

@@ -10,6 +10,7 @@ Welcometothesocial::Application.routes.draw do
   match  '/boards/personal', to: 'boards#personal', via: 'get', as: :personal
   match  '/boards/discover', to: 'boards#discover', via: 'get', as: :discover
   resources :boards do
+    resources :posts
   end
   
   # The priority is based upon order of creation: first created -> highest priority.
