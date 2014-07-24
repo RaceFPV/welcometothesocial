@@ -1,10 +1,18 @@
 <h1 class="pagetitle"> Discover </h1>
 <div  class="pagecontent">
 <row>
-  <div class="col-sm-3" style="margin-top: 150px;">
+  <div class="col-sm-3" style="margin-top: 125px;">
     <p>Select a few boards from the right, and click the <i class="fa fa-heart-o"></i> to save them to your personal page</p>
   </div>
   <div class="col-sm-9 well" style="min-height: 350px;">
+    <ul>
+      <% @boards = Board.all %>
+      <% @boards.each do |x| %>
+    <li>
+    <%= link_to x.name, "#" %>
+    </li>
+    <% end %>
+    </ul>
   </div>
 </row>
 </div>
