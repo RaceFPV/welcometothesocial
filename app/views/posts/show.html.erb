@@ -1,6 +1,11 @@
 <h1 class="pagetitle"> View Post </h1>
 
 <div  class="pagecontent">
+  <%= link_to "Back to #{@board.name}", board_path(@board.name) %>
+  <br/>
+  <h2> Title </h2>
   <%= @post.title %>
+  <br/>
+  <h2> Content </h2>
   <%= @post.content %>
 </div>
