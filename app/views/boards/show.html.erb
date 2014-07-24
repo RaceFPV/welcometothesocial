@@ -1,0 +1,19 @@
+<h1 class="pagetitle"> <%= @boardname %> </h1>
+  
+<div  class="pagecontent">
+<row>
+  <div class="col-sm-9" style="min-height: 350px;">
+    <div class="list-group">
+      <%= link_to "First post", "#", class: "list-group-item" %>
+      <%= link_to "First post", "#", class: "list-group-item" %>
+      <%= link_to "First post", "#", class: "list-group-item" %>
+      <%= link_to "First post", "#", class: "list-group-item" %>
+      <%= link_to "First post", "#", class: "list-group-item" %>
+    </div>
+  </div>
+  <div class="col-sm-3" style="margin-top: 50px;">
+    <p> <%= @boarddescription %> </p>
+    <%= link_to "Add a post", "#" %>
+  </div>
+  </row>
+</div>

@@ -8,5 +8,8 @@ class BoardsController < ApplicationController
   end
   
   def show
+    @board = Board.find(params[:id])
+    @boardname = @board.name
+    @boarddescription = @board.description
   end
 end
