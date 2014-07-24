@@ -9,6 +9,8 @@ Welcometothesocial::Application.routes.draw do
   #location users go after signing in
   match  '/boards/personal', to: 'boards#personal', via: 'get', as: :personal
   match  '/boards/discover', to: 'boards#discover', via: 'get', as: :discover
+  resources :boards do
+  end
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -24,7 +24,7 @@ boards = [
     description: %q[Doge don't give a crap, such wow]
     },
   {
-    name: %q[Ask .Social],
+    name: %q[Ask Social],
     description: %q[Ask and ye shall receive... answers]
     }
 ]

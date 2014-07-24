@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20140724185538) do
     t.text     "description"
   end
 
-  add_index "boards", ["user_id"], name: "index_boards_on_user_id"
+  add_index "boards", ["name"], name: "index_boards_on_name"
 
   create_table "posts", force: true do |t|
     t.integer  "board_id"
