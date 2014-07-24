@@ -11,7 +11,7 @@ class BoardsController < ApplicationController
     @board = Board.find(params[:id])
     @boardname = @board.name
     @boarddescription = @board.description
-    @posts = @board.posts.all
+    @posts = @board.posts.where('title != ? AND content != ?', "NULL", "NULL")
   end
   
   def new
