@@ -4,8 +4,9 @@
   <h2 align="center"> Add a new post to <%= @board.name %> </h2>
   <br/>
     
-  <%= form_for @post, url: board_posts_path(@board.name, @post.id) do |f| %>
-  
+  <%= form_for :postform, url: board_posts_path(@board.name, @post.id) do |f| %>
+  <%= f.text_field :title, class: "form-control", placeholder: "Post title" %>
+  <%= f.text_field :content, class: "form-control", placeholder: "Post content" %>
   <%= f.submit "Submit post", class: 'btn btn-large btn-primary'%>
   <% end %>
 </div>

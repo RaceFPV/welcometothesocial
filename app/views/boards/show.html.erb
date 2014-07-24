@@ -13,7 +13,7 @@
   </div>
   <div class="col-sm-3" style="margin-top: 50px;">
     <p> <%= @boarddescription %> </p>
-    <%= link_to "Add a post", "#" %>
+    <%= link_to "Add a post", new_board_post_path(@board.name) %>
   </div>
   </row>
 </div>
