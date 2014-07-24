@@ -85,14 +85,15 @@ input[type="submit"]:hover{
   cursor:pointer;
 }
 
-.name-help,.email-help{
-  display:none;
-  padding:0px;
-  margin:0px 0px 15px 0px;
-}
-
-.optimize{
-  position:fixed;
-  right:3%;
-  top:0px;
+form p {
+  float: left;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  margin-left: 10px;
+  margin-top: 15px;
+  
+  .social-icon {
+    width: 26px;
+    display: inline-block;
+  }
 }

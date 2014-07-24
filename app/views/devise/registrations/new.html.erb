@@ -9,11 +9,14 @@
       <div><%= f.password_field :password, :placeholder => "Password" %></div>
 
       <div><%= f.password_field :password_confirmation, :placeholder => "Confirm Password" %></div>
-
-    <div><%= f.submit "Let's get .Social" %></div>
-    <%= link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2) %>
+  
+      <div><%= f.submit "Let's get .Social" %></div>
+      <p>Or get .Social with: 
+        <%= image_tag "authbuttons/google-icon.png", :class => 'social-icon' %>
+        <%= image_tag "authbuttons/facebook-icon.png", :class => 'social-icon' %>
+        <%= image_tag "authbuttons/twitter-icon.png", :class => 'social-icon' %>
+      <!-- <%= link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2) %> -->
+    
+    <% end %>
   </div>
-<% end %>
 </div>
-<!-- %= render "devise/shared/links" %>
-
