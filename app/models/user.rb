@@ -14,16 +14,18 @@ class User < ActiveRecord::Base
       return user
     else
       registered_user = User.where(:email => access_token.info.email).first
+      
       if registered_user
         return registered_user
       else
-        user = User.create(name: data["name"],
+        user = User.create(
           provider:access_token.provider,
           email: data["email"],
           uid: access_token.uid ,
-          password: Devise.friendly_token[0,20],
-        )
+          password: Devise.friendly_token[0,20]
+         )
       end
-   end
-end
+    end
+  end
+  
 end

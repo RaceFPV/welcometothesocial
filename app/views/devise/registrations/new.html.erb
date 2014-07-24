@@ -11,7 +11,7 @@
       <div><%= f.password_field :password_confirmation, :placeholder => "Confirm Password" %></div>
 
     <div><%= f.submit "Let's get .Social" %></div>
-    <!-- This doesn't work yet. <%= link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2) %> -->
+    <%= link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2) %>
   </div>
 <% end %>
 </div>
