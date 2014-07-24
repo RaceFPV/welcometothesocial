@@ -1,0 +1,11 @@
+<h1 class="pagetitle"> New Post </h1>
+
+<div  class="pagecontent">
+  <h2 align="center"> Add a new post to <%= @board.name %> </h2>
+  <br/>
+    
+  <%= form_for @post, url: board_posts_path(@board.name, @post.id) do |f| %>
+  
+  <%= f.submit "Submit post", class: 'btn btn-large btn-primary'%>
+  <% end %>
+</div>
