@@ -4,11 +4,9 @@
 <row>
   <div class="col-sm-9" style="min-height: 350px;">
     <div class="list-group">
-      <%= link_to "First post", "#", class: "list-group-item" %>
-      <%= link_to "First post", "#", class: "list-group-item" %>
-      <%= link_to "First post", "#", class: "list-group-item" %>
-      <%= link_to "First post", "#", class: "list-group-item" %>
-      <%= link_to "First post", "#", class: "list-group-item" %>
+      <% @posts.each do |x| %>
+      <%= link_to x.title, board_post_path(@board.name, x.id), class: "list-group-item" %>
+      <% end %>
     </div>
   </div>
   <div class="col-sm-3" style="margin-top: 50px;">

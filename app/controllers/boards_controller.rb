@@ -11,6 +11,7 @@ class BoardsController < ApplicationController
     @board = Board.find(params[:id])
     @boardname = @board.name
     @boarddescription = @board.description
+    @posts = @board.posts.all
   end
   
   def new
