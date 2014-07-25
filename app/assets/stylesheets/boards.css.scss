@@ -5,8 +5,10 @@
 .pagetitle {
   position: fixed;
   top: -45px;
-  left: 45%;
   z-index: 1200;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
 }
 
 .pagecontent {
