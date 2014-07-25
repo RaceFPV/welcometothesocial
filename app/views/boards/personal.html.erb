@@ -3,12 +3,21 @@
 <row>
   <div class="col-sm-8 col-sm-offset-2" align="center">
 <!-- check if the user has any posts -->
-<% if @user.posts.empty? %>
+<% if @posts.empty? %>
 <h3> You don't have any recent posts </h3>
 <% else %>
-  <% @user.posts.each do |x| %>
-<%= link_to x.title, x %>
+        <row>
+   <div class="col-sm-3" style="margin-top: 5px;">
+         <p>Here's your list of recent posts.</p>
+  </div>
+  <div class="col-sm-9" style="min-height: 150px;">
+    <div class="list-group">
+  <% @posts.each do |x| %>
+    <%= link_to x.title, board_post_path(x.board, x.id), class: 'list-group-item' %>
 <% end %>
+    </div>
+      </div>
+    </row>
 <% end %>
 <br/>
     <br/>
@@ -21,11 +30,11 @@
     <h4><%= link_to "Go discover some new boards!", discover_path %></h4>
 <% else %>
     <row>
-   <div class="col-sm-3" style="margin-top: 25px;">
+   <div class="col-sm-3" style="margin-top: 5px;">
     <p>Here's your list of boards you love.</p>
       <p> Don't like anything you see here? <%= link_to "Go discover some new boards!", discover_path %></p>
   </div>
-  <div class="col-sm-9" style="min-height: 350px;">
+  <div class="col-sm-9" style="min-height: 150px;">
     <div class="list-group">
     <% @boards.each do |x| %>
       <%= link_to x.name, x, class: 'list-group-item' %>

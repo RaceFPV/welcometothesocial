@@ -6,6 +6,7 @@ class BoardsController < ApplicationController
     end
     @user = User.find(current_user)
     @boards = Board.where('name != ? AND user_id == ?', "NULL", @user.id)
+    @posts = Post.where('title != ? AND user_id == ?', "NULL", @user.id)
   end
   
   def show
