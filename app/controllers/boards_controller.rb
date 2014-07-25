@@ -12,6 +12,7 @@ class BoardsController < ApplicationController
   def show
     @board = Board.find(params[:id])
     @boardname = @board.name
+    @user = User.find(current_user.id) rescue 0
     @boarddescription = @board.description
     @posts = @board.posts.where('title != ? AND content != ?', "NULL", "NULL")
   end
@@ -35,6 +36,26 @@ class BoardsController < ApplicationController
   
   def discover
     @boards = Board.where('name != ?', "NULL")
+  end
+  
+  def love
+    @board = Board.find(params[:id])
+    @user = User.find(current_user.id)
+    @board[:user_id] = @user.id
+    @board.save!
+    return redirect_to board_path(params[:id])
+  end
+  
+  def unlove
+    @board = Board.find(params[:id])
+    @user = User.find(current_user.id)
+    if @board.user_id == @user.id
+      @board.user_id = 0
+    else
+    @board.user_id.delete(@user.id)
+    end
+    @board.save!
+    return redirect_to board_path(params[:id])
   end
   
 end

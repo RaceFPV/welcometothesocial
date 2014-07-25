@@ -9,6 +9,8 @@ Welcometothesocial::Application.routes.draw do
   #location users go after signing in
   match  '/boards/personal', to: 'boards#personal', via: 'get', as: :personal
   match  '/boards/discover', to: 'boards#discover', via: 'get', as: :discover
+  match  '/boards/:id/love', to: 'boards#love', via: 'get', as: :love
+  match  '/boards/:id/unlove', to: 'boards#unlove', via: 'get', as: :unlove
   resources :boards do
     resources :posts
   end

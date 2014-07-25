@@ -13,6 +13,31 @@
   margin-top: 50px;
 }
 
+.lovebutton {
+  position: fixed;
+  top: 50px;
+  z-index: 100;
+  right: 40px;
+  background-color: #333;
+  padding: 10px;
+  width: 60px;
+  -moz-border-radius-bottomright: 20px;
+-webkit-border-bottom-right-radius: 20px;
+border-bottom-right-radius: 20px;
+-moz-border-radius-bottomleft: 20px;
+-webkit-border-bottom-left-radius: 20px;
+border-bottom-left-radius: 20px;
+}
+
+.lovebutton i {
+  font-size: 25px;
+  color: #428BCA;
+}
+
+.lovebutton:hover i {
+  color: #66aadd;
+}
+
 h1 {
   font-family: 'Pacifico', cursive;
 }

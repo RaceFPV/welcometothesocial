@@ -10,6 +10,10 @@ body {
   text-align: center;
 }
 
+.navbar-inverse {
+  border: none;
+}
+
 .center {
     margin-left: auto;
     margin-right: auto;

@@ -1,8 +1,24 @@
 <h1 class="pagetitle"> <%= @boardname %> </h1>
+
+<div class="lovebutton">
+  <% if @user == 0 %>
+<% elsif @board.user_id.to_s.include?(@user.id.to_s) %>
+  <%= link_to unlove_path do %>
+  <i class="fa fa-heart"></i>
+  <% end %>
+  <% else %>
+  <%= link_to love_path do %>
+  <i class="fa fa-heart-o"></i>
+  <% end %>
+  <% end %>
+</div>
   
 <div  class="pagecontent">
 <row>
   <div class="col-sm-9" style="min-height: 350px;">
+    <% if @posts.empty? %>
+    <h3> No posts yet, <%= link_to "be the first!", new_board_post_path(@board.name) %> </h3>
+    <% end %>
     <div class="list-group">
       <% @posts.each do |x| %>
       <%= link_to x.title, board_post_path(@board.name, x.id), class: "list-group-item" %>
