@@ -42,7 +42,7 @@ GEM
     better_errors (1.1.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
-    bootstrap-sass (3.0.2.1)
+    bootstrap-sass (3.2.0.0)
       sass (~> 3.2)
     brakeman (2.4.0)
       erubis (~> 2.6)
@@ -255,7 +255,7 @@ PLATFORMS
 DEPENDENCIES
   annotate
   better_errors
-  bootstrap-sass (~> 3.0.2.0)
+  bootstrap-sass (~> 3.2.0)
   brakeman
   bullet (~> 4.7.1)
   capybara
@@ -275,7 +275,7 @@ DEPENDENCIES
   reek
   rspec-rails
   ruby-progressbar
-  sass-rails (~> 4.0.0)
+  sass-rails (>= 3.2)
   selenium-webdriver
   smusher
   sqlite3
