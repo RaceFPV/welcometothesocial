@@ -1,0 +1,12 @@
+<h1 class="pagetitle"> New Board </h1>
+
+<div  class="pagecontent">
+  <h2 align="center"> Add a new board</h2>
+  <br/>
+    
+  <%= form_for :boardform, url: boards_path do |f| %>
+  <%= f.text_field :name, class: "form-control", placeholder: "Board title" %>
+  <%= f.text_area :description, class: "form-control", placeholder: "Board description" %>
+  <%= f.submit "Create this board", class: 'btn btn-large btn-primary'%>
+  <% end %>
+</div>

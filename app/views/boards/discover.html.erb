@@ -3,7 +3,6 @@
 <row>
   <div class="col-sm-9" style="min-height: 350px;">
     <div class="list-group">
-      <% @boards = Board.all %>
       <% @boards.each do |x| %>
       <%= link_to x, class: "list-group-item" do %>
           <h4 class="list-group-item-heading"><%= x.name %></h4>
@@ -14,6 +13,7 @@
   </div>
     <div class="col-sm-3" style="margin-top: 125px;">
     <p>Find a board you like, and then click the <i class="fa fa-heart-o"></i> once there to save it to your personal page for later</p>
+      <p> Don't like anything you see here? Why not <%= link_to "create your own board!", new_board_path %></p>
   </div>
 </row>
 </div>

@@ -10,17 +10,29 @@
 <%= link_to x.title, x %>
 <% end %>
 <% end %>
-
+<br/>
+    <br/>
+    <br/>
 <!-- check if the user has any boards -->
-<% if @user.boards.empty? %>
+    <% if @boards.empty? %>
 <h3> You aren't a member of any boards </h3>
     <br/>
     <br/>
     <h4><%= link_to "Go discover some new boards!", discover_path %></h4>
 <% else %>
-<% @user.boards.each do |x| %>
-<%= link_to x.name, x %>
+    <row>
+   <div class="col-sm-3" style="margin-top: 25px;">
+    <p>Here's your list of boards you love.</p>
+      <p> Don't like anything you see here? <%= link_to "Go discover some new boards!", discover_path %></p>
+  </div>
+  <div class="col-sm-9" style="min-height: 350px;">
+    <div class="list-group">
+    <% @boards.each do |x| %>
+      <%= link_to x.name, x, class: 'list-group-item' %>
 <% end %>
+    </div>
+      </div>
+    </row>
 <% end %>
   </div>
   </row>

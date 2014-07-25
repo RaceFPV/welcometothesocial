@@ -10,6 +10,7 @@ class PostsController < ApplicationController
     @post = @board.posts.new
     @post[:title] = params[:postform][:title]
     @post[:content] = params[:postform][:content]
+    @post[:user_id] = current_user.id
     if @post.save
       return redirect_to board_post_path(@board.name, @post.id)
     else
