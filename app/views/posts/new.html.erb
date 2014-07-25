@@ -1,12 +1,15 @@
 <h1 class="pagetitle"> New Post </h1>
 
-<div  class="pagecontent">
-  <h2 align="center"> Add a new post to <%= @board.name %> </h2>
+<div class="mainsplash center">
+  <h2 align="center" style="color: #ccc"> Add a new post to <span style="color: #28D2DE;"><%= @board.name %></span> </h2>
   <br/>
-    
-  <%= form_for :postform, url: board_posts_path(@board.name, @post.id) do |f| %>
-  <%= f.text_field :title, class: "form-control", placeholder: "Post title" %>
-  <%= f.text_area :content, class: "form-control", placeholder: "Post content" %>
-  <%= f.submit "Submit post", class: 'btn btn-large btn-primary'%>
-  <% end %>
+  <div class="col-sm-6 col-sm-offset-3">
+    <%= form_for :postform, url: board_posts_path(@board.name, @post.id) do |f| %>
+      <%= f.text_field :title, class: "form-control", placeholder: "Post title" %>
+      <br/>
+      <%= f.text_area :content, class: "form-control", placeholder: "Post content" %>
+      <br/>
+      <%= f.submit "Submit post", class: 'btn btn-large btn-primary'%>
+    <% end %>
+  </div>
 </div>

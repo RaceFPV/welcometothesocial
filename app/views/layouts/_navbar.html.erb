@@ -11,7 +11,7 @@
 		    </div>
 		    <div class="collapse navbar-collapse">
 		      <ul class="login nav navbar-nav">
-            <div class="nav navbar-nav">
+            <div class="nav navbar-nav ">
               <% if user_signed_in? %>
                 <li><%= link_to 'Profile', edit_user_registration_path %></li>
                 <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
