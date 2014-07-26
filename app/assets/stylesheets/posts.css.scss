@@ -1,3 +1,29 @@
 // Place all the styles related to the posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.backbutton {
+  position: fixed;
+  top: 50px;
+  z-index: 100;
+  left: 50px;
+  background-color: #333;
+  padding: 10px;
+  padding-top: 5px;
+  width: 60px;
+  -moz-border-radius-bottomright: 20px;
+-webkit-border-bottom-right-radius: 20px;
+border-bottom-right-radius: 20px;
+-moz-border-radius-bottomleft: 20px;
+-webkit-border-bottom-left-radius: 20px;
+border-bottom-left-radius: 20px;
+}
+
+.backbutton i {
+  font-size: 25px;
+  color: #428BCA;
+}
+
+.backbutton:hover i {
+  color: #66aadd;
+}

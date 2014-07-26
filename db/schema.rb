@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140724185538) do
+ActiveRecord::Schema.define(version: 20140725214730) do
 
   create_table "boards", force: true do |t|
     t.datetime "created_at"
@@ -34,6 +34,18 @@ ActiveRecord::Schema.define(version: 20140724185538) do
 
   add_index "posts", ["board_id"], name: "index_posts_on_board_id"
   add_index "posts", ["user_id"], name: "index_posts_on_user_id"
+
+  create_table "replies", force: true do |t|
+    t.text     "content"
+    t.integer  "user_id"
+    t.integer  "post_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "reply"
+  end
+
+  add_index "replies", ["post_id"], name: "index_replies_on_post_id"
+  add_index "replies", ["user_id"], name: "index_replies_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

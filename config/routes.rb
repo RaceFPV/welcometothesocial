@@ -11,8 +11,12 @@ Welcometothesocial::Application.routes.draw do
   match  '/boards/discover', to: 'boards#discover', via: 'get', as: :discover
   match  '/boards/:id/love', to: 'boards#love', via: 'get', as: :love
   match  '/boards/:id/unlove', to: 'boards#unlove', via: 'get', as: :unlove
+  match  '/replies/new', to: 'replies#new', via: 'get'
+  match  '/replies/show/:id', to: 'replies#show', via: 'get', as: :replies
   resources :boards do
-    resources :posts
+    resources :posts do
+      resources :replies
+    end
   end
   
   # The priority is based upon order of creation: first created -> highest priority.

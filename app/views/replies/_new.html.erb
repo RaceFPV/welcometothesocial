@@ -1,0 +1,6 @@
+
+    <%= form_for :replyform, url: board_post_replies_path(@board.name, @post.id) do |f| %>
+<%= f.text_area :content, class: "form-control", placeholder: "Enter your reply here" %>
+      <br/>
+    <%= f.submit "Submit reply", class: 'btn btn-small btn-primary'%>
+    <% end %>

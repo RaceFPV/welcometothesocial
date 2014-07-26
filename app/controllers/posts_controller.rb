@@ -21,6 +21,7 @@ class PostsController < ApplicationController
   def show
     @board = Board.find(params[:board_id])
     @post = @board.posts.find(params[:id])
+    @replies = Replies.where('post_id == ? AND content != ?', @post.id, "NULL")
   end
   
 end

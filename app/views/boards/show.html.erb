@@ -21,7 +21,10 @@
     <% end %>
     <div class="list-group">
       <% @posts.each do |x| %>
-      <%= link_to x.title, board_post_path(@board.name, x.id), class: "list-group-item" %>
+      <%= link_to board_post_path(@board.name, x.id), class: "list-group-item" do %>
+      <%= x.title %>
+      <span class="badge"><%= Replies.getreplycount(x.id)%> replies</span>
+      <% end %>
       <% end %>
     </div>
   </div>
