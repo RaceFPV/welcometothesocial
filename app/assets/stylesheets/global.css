@@ -20,6 +20,14 @@ body {
     width: 70%;
 }
 
+h2, h3, h4, p {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.panel-body, .list-group {
+  font-family: 'Montserrat', sans-serif;
+}
+
 .login {
   font-family: 'Montserrat', sans-serif;
   float: right;

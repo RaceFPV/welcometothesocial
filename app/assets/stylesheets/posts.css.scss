@@ -27,3 +27,15 @@ border-bottom-left-radius: 20px;
 .backbutton:hover i {
   color: #66aadd;
 }
+
+.panel-default > .panel-heading {
+  color: #eaeaea;
+  font-size: 20px;
+  font-weight: 800;
+  text-shadow: 2px 2px 2px rgba(230, 227, 230, 0.55);
+}
+
+.postbackground {
+  background: url(dark_wood.png);
+  color: #eaeaea;
+}
